@@ -7,7 +7,7 @@ import { appsInShowcaseOrder } from '../data/apps'
 export default function AppsSection() {
   const showcaseApps = useMemo(() => appsInShowcaseOrder(), [])
   return (
-    <section className="relative h-screen snap-start shrink-0 flex flex-col overflow-hidden px-4 sm:px-6 md:px-12 lg:px-20 pt-3 pb-3 lg:py-0">
+    <section className="relative h-screen snap-start shrink-0 flex flex-col overflow-hidden px-4 sm:px-6 md:px-12 lg:px-20 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:pb-0 lg:py-0">
       <div className="max-w-7xl mx-auto w-full flex flex-col flex-1 min-h-0 lg:justify-center">
 
         <motion.div
@@ -15,7 +15,7 @@ export default function AppsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex-shrink-0 text-center lg:mb-10 mb-1"
+          className="flex-shrink-0 text-center mb-4 sm:mb-5 lg:mb-10"
         >
           <p
             className="text-[9px] sm:text-[10px] lg:text-xs font-semibold uppercase tracking-[0.35em] mb-0.5 lg:mb-3"
@@ -42,8 +42,8 @@ export default function AppsSection() {
         </motion.div>
 
         {/* Mobile: horizontal cover-flow carousel · Desktop: grid */}
-        <div className="flex flex-col flex-1 min-h-0 justify-center lg:justify-start w-full lg:flex-none">
-          <div className="lg:hidden w-full shrink-0 flex flex-col justify-center min-h-0 overflow-visible pb-1">
+        <div className="flex flex-col flex-1 min-h-0 justify-start w-full lg:flex-none">
+          <div className="lg:hidden w-full shrink-0 flex flex-col justify-start min-h-0 overflow-visible">
             <MobileAppsShowcase />
           </div>
           <div className="hidden lg:grid lg:grid-cols-3 lg:gap-5 lg:items-stretch w-full">

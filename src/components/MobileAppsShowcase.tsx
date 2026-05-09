@@ -163,15 +163,15 @@ export default function MobileAppsShowcase() {
   }
 
   return (
-    <div className="flex w-full shrink-0 flex-col gap-3 overflow-visible">
-      {/* Extra vertical padding inside scrollport so card glow isn&apos;t clipped into a sharp line above the dots */}
-      <div className="relative w-full overflow-visible py-2 [transform-style:preserve-3d] sm:py-3" style={{ perspective: '1200px' }}>
+    <div className="flex w-full shrink-0 flex-col gap-1 overflow-visible">
+      {/* Moderate bottom padding inside scrollport for glow; keep dots visually tied to the card */}
+      <div className="relative w-full overflow-visible pt-1 pb-0 [transform-style:preserve-3d] sm:pt-2" style={{ perspective: '1200px' }}>
         <div
           ref={scrollerRef}
           role="region"
           aria-roledescription="carousel"
           aria-label="Flexkit apps"
-          className="no-scrollbar flex snap-x snap-mandatory flex-row gap-2 overflow-x-auto overflow-y-visible px-[max(0.75rem,calc(50vw-min(44vw,12rem)))] pb-16 pt-8 sm:gap-2.5"
+          className="no-scrollbar flex snap-x snap-mandatory flex-row gap-2 overflow-x-auto overflow-y-visible px-[max(0.75rem,calc(50vw-min(44vw,12rem)))] pb-8 pt-4 sm:gap-2.5 sm:pb-9 sm:pt-5"
           style={{ WebkitOverflowScrolling: 'touch' }}
         >
           {extended.map((app, ei) => {
@@ -199,7 +199,7 @@ export default function MobileAppsShowcase() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-2 pb-1 pt-2">
+      <div className="flex flex-col items-center gap-1.5 pt-0 pb-1">
         <p className="text-[11px] font-medium uppercase tracking-[0.26em] text-white/28">Swipe cards</p>
         <div className="flex gap-2">
           {orderedApps.map((a, i) => (
