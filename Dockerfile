@@ -6,9 +6,8 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2 — serve
-FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Stage 2 — serve with Caddy
+FROM caddy:alpine
+COPY --from=builder /app/dist /srv
+COPY Caddyfile /etc/caddy/Caddyfile
 EXPOSE 13002
-CMD ["nginx", "-g", "daemon off;"]
