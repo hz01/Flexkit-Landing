@@ -54,3 +54,10 @@ export const apps: AppData[] = [
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.flexkit.scribr',
   },
 ]
+
+/** Swipr always first (carousel + lineup grid), regardless of array order in source. */
+export function appsInShowcaseOrder(): AppData[] {
+  const swipr = apps.find((a) => a.id === 'swipr')
+  const rest = apps.filter((a) => a.id !== 'swipr')
+  return swipr ? [swipr, ...rest] : [...apps]
+}

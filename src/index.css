@@ -71,10 +71,8 @@
   background-size: 32px 32px;
 }
 
-/* Lock body scroll on desktop — JS wheel handler owns it */
-@media (min-width: 1024px) {
-  html, body { overflow: hidden; }
-}
+/* Lock body scroll; snap container owns vertical scrolling */
+html, body { overflow: hidden; }
 
 /* Hide scrollbar on the JS-controlled snap container */
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }

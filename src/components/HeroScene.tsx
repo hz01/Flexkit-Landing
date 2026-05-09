@@ -108,8 +108,8 @@ function Particles() {
 
 export default function HeroScene() {
   // G1 (blue):   13 teeth, pitch_r = 1.265
-  // G2 (teal):    8 teeth, pitch_r = 0.785  — meshes with G1, dist = 2.05
-  // G3 (purple):  5 teeth, pitch_r = 0.490  — meshes with G2, dist = 1.275
+  // G2 (teal):    8 teeth, pitch_r = 0.785; meshes with G1, dist = 2.05
+  // G3 (purple):  5 teeth, pitch_r = 0.490; meshes with G2, dist = 1.275
   //
   // Speed ratios (gear law: ω ∝ -1/teeth)
   const s1 =  0.22
@@ -134,21 +134,21 @@ export default function HeroScene() {
     >
       <Suspense fallback={null}>
         <FloatGroup>
-          {/* G1 — large, blue */}
+          {/* G1: large, blue */}
           <Gear
             position={[g1x, g1y, 0]}
             outerR={1.45} innerR={1.08} teeth={13} thickness={0.28}
             color="#4A6CF7" speed={s1}
             phase={0}
           />
-          {/* G2 — medium, teal — meshes with G1 */}
+          {/* G2: medium, teal; meshes with G1 */}
           <Gear
             position={[g2x, g2y, 0]}
             outerR={0.90} innerR={0.67} teeth={8} thickness={0.28}
             color="#20C997" speed={s2}
             phase={Math.PI / 8}   // half-tooth offset to interlock with G1
           />
-          {/* G3 — small, purple — meshes with G2 */}
+          {/* G3: small, purple; meshes with G2 */}
           <Gear
             position={[g3x, g3y, 0]}
             outerR={0.56} innerR={0.42} teeth={5} thickness={0.28}

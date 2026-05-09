@@ -5,7 +5,7 @@ import AppsSection from './components/AppsSection'
 import ToolsBanner from './components/ToolsBanner'
 
 const SECTIONS = 3
-const COOLDOWN = 850 // ms — time to wait before allowing next snap
+const COOLDOWN = 850 // ms before next snap is allowed
 
 export default function App() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -50,7 +50,7 @@ export default function App() {
       <Background />
       <main
         ref={containerRef}
-        className="relative z-10 lg:h-screen lg:overflow-y-scroll no-scrollbar"
+        className="relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory overscroll-y-contain no-scrollbar"
       >
         <Hero />
         <AppsSection />

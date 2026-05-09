@@ -16,8 +16,8 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative lg:h-screen flex items-center overflow-hidden py-24 lg:py-0">
-      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative h-screen snap-start shrink-0 flex items-center overflow-hidden px-6 md:px-12 lg:px-20 py-6 lg:py-0">
+      <div className="max-w-7xl mx-auto w-full py-0 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
         {/* Left: text */}
         <div className="flex flex-col gap-6 z-10">

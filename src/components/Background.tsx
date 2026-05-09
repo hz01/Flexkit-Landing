@@ -4,7 +4,7 @@ export default function Background() {
       {/* Dot grid */}
       <div className="absolute inset-0 dot-grid opacity-100" />
 
-      {/* Teal orb — Swipr */}
+      {/* Teal orb (Swipr) */}
       <div
         className="absolute rounded-full"
         style={{
@@ -18,7 +18,7 @@ export default function Background() {
         }}
       />
 
-      {/* Blue orb — SubTrakr */}
+      {/* Blue orb (SubTrakr) */}
       <div
         className="absolute rounded-full"
         style={{
@@ -32,7 +32,7 @@ export default function Background() {
         }}
       />
 
-      {/* Purple orb — Scribr */}
+      {/* Purple orb (Scribr) */}
       <div
         className="absolute rounded-full"
         style={{

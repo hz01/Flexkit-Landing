@@ -1,5 +1,5 @@
 const URL = 'https://flexkit.net'
-const TEXT = 'Check out Flexkit — beautifully simple apps for everyday life.'
+const TEXT = 'Check out Flexkit: beautifully simple apps for everyday life.'
 
 const platforms = [
   {

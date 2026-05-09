@@ -4,10 +4,10 @@ export default function ToolsBanner() {
   const year = new Date().getFullYear()
 
   return (
-    <section className="relative lg:h-screen flex flex-col overflow-hidden px-6 md:px-12 lg:px-20 py-12 lg:py-0">
+    <section className="relative h-screen snap-start shrink-0 flex flex-col min-h-0 overflow-hidden px-6 md:px-12 lg:px-20 py-4 lg:py-0">
 
-      {/* Main content — centered, takes all available space */}
-      <div className="flex-1 flex flex-col justify-center max-w-7xl mx-auto w-full">
+      {/* Main content (scroll if card + header exceed viewport) */}
+      <div className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain flex flex-col justify-center max-w-7xl mx-auto w-full pb-4">
 
         {/* Section label */}
         <motion.div
@@ -135,9 +135,9 @@ export default function ToolsBanner() {
         </motion.div>
       </div>
 
-      {/* Footer — pinned at bottom of this snap page */}
+      {/* Footer pinned to bottom of this snap section */}
       <footer
-        className="max-w-7xl mx-auto w-full py-6 flex flex-col sm:flex-row items-center justify-between gap-3"
+        className="shrink-0 max-w-7xl mx-auto w-full py-4 lg:py-6 flex flex-col sm:flex-row items-center justify-between gap-3"
         style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
       >
         <span className="gradient-text text-lg font-black tracking-tight">FLEXKIT</span>

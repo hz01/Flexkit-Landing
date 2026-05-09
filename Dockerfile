@@ -1,4 +1,4 @@
-# Stage 1 — build
+# Stage 1: build
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
@@ -6,7 +6,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Stage 2 — serve with Caddy
+# Stage 2: serve with Caddy
 FROM caddy:alpine
 COPY --from=builder /app/dist /srv
 COPY Caddyfile /etc/caddy/Caddyfile
