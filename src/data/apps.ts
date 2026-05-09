@@ -19,9 +19,9 @@ export const apps: AppData[] = [
   {
     id: 'swipr',
     name: 'Swipr',
-    tagline: 'Task management, reimagined',
+    tagline: 'Clean your gallery, one swipe at a time',
     description:
-      'Swipe your way through daily tasks and habits. Simple, satisfying, and effortlessly productive.',
+      'Swipe to keep or delete photos, just like Tinder. Declutter your gallery fast, and find duplicates with one tap.',
     logo: swiprLogo,
     color: '#20C997',
     gradient: 'linear-gradient(135deg, #20C997, #E84040)',
