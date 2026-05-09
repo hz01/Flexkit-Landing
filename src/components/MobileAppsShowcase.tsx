@@ -183,7 +183,7 @@ export default function MobileAppsShowcase() {
                 ref={(el) => {
                   itemRefs.current[ei] = el
                 }}
-                className="flex shrink-0 snap-center items-center justify-center [transform-style:preserve-3d]"
+                className="flex shrink-0 snap-center snap-always items-center justify-center [transform-style:preserve-3d]"
                 style={{
                   transform: `scale(${tf.scale}) rotateY(${tf.rotateY}deg)`,
                   opacity: tf.opacity,
