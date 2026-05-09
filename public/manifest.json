@@ -1,0 +1,17 @@
+{
+  "name": "Flexkit",
+  "short_name": "Flexkit",
+  "description": "Beautifully simple apps built for everyday life.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06060f",
+  "theme_color": "#06060f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
