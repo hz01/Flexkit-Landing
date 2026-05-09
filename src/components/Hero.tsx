@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { lazy, Suspense } from 'react'
 import { apps } from '../data/apps'
+import ShareButtons from './ShareButtons'
 
 const HeroScene = lazy(() => import('./HeroScene'))
 
@@ -87,6 +88,16 @@ export default function Hero() {
             <span className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>
               Available on Android &amp; iOS
             </span>
+          </motion.div>
+
+          {/* Share buttons */}
+          <motion.div
+            custom={4}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+          >
+            <ShareButtons />
           </motion.div>
         </div>
 
