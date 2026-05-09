@@ -35,13 +35,19 @@ export default function MobileAppsShowcase() {
     const el = itemRefs.current[ei]
     if (!sc || !el) return
     const left = el.offsetLeft + el.offsetWidth / 2 - sc.clientWidth / 2
-    const clamped = Math.max(0, left)
+    const clamped = Math.max(0, Math.round(left))
     suppressBoundaryRef.current = true
     if (instant) {
+      /* Snap + instant scrollLeft fight each other at clone boundaries — brief snap:none avoids flicker */
+      sc.style.scrollSnapType = 'none'
       sc.scrollLeft = clamped
       requestAnimationFrame(() => {
-        suppressBoundaryRef.current = false
-        setScrollLeft(sc.scrollLeft)
+        sc.scrollLeft = clamped
+        requestAnimationFrame(() => {
+          sc.style.removeProperty('scroll-snap-type')
+          suppressBoundaryRef.current = false
+          setScrollLeft(sc.scrollLeft)
+        })
       })
     } else {
       sc.scrollTo({ left: clamped, behavior: 'smooth' })
@@ -63,35 +69,42 @@ export default function MobileAppsShowcase() {
       frame = requestAnimationFrame(() => setScrollLeft(sc.scrollLeft))
     }
 
-    const checkInfinite = () => {
+    const runBoundaryCheck = () => {
       if (suppressBoundaryRef.current || !sc || extLen < 3) return
-      clearTimeout(boundaryTimerRef.current)
-      boundaryTimerRef.current = setTimeout(() => {
-        if (suppressBoundaryRef.current || !sc) return
-        const viewportMid = sc.scrollLeft + sc.clientWidth / 2
-        let bestEi = 0
-        let bestDist = Infinity
-        for (let ei = 0; ei < extLen; ei++) {
-          const el = itemRefs.current[ei]
-          if (!el) continue
-          const mid = el.offsetLeft + el.offsetWidth / 2
-          const d = Math.abs(viewportMid - mid)
-          if (d < bestDist) {
-            bestDist = d
-            bestEi = ei
-          }
+      const viewportMid = sc.scrollLeft + sc.clientWidth / 2
+      let bestEi = 0
+      let bestDist = Infinity
+      for (let ei = 0; ei < extLen; ei++) {
+        const slideEl = itemRefs.current[ei]
+        if (!slideEl) continue
+        const mid = slideEl.offsetLeft + slideEl.offsetWidth / 2
+        const d = Math.abs(viewportMid - mid)
+        if (d < bestDist) {
+          bestDist = d
+          bestEi = ei
         }
-        if (bestEi === 0) scrollToExtendedIndex(n, true)
-        else if (bestEi === n + 1) scrollToExtendedIndex(1, true)
-      }, 140)
+      }
+      if (bestEi === 0) scrollToExtendedIndex(n, true)
+      else if (bestEi === n + 1) scrollToExtendedIndex(1, true)
+    }
+
+    const scheduleBoundaryCheck = () => {
+      clearTimeout(boundaryTimerRef.current)
+      boundaryTimerRef.current = setTimeout(runBoundaryCheck, 160)
+    }
+
+    const onScrollEnd = () => {
+      clearTimeout(boundaryTimerRef.current)
+      runBoundaryCheck()
     }
 
     tick()
     const onScroll = () => {
       tick()
-      checkInfinite()
+      scheduleBoundaryCheck()
     }
     sc.addEventListener('scroll', onScroll, { passive: true })
+    sc.addEventListener('scrollend', onScrollEnd as EventListener)
     const ro = new ResizeObserver(() => {
       tick()
       scrollToExtendedIndex(1, true)
@@ -106,6 +119,7 @@ export default function MobileAppsShowcase() {
       cancelAnimationFrame(frame)
       clearTimeout(boundaryTimerRef.current)
       sc.removeEventListener('scroll', onScroll)
+      sc.removeEventListener('scrollend', onScrollEnd as EventListener)
       window.removeEventListener('resize', tick)
       ro.disconnect()
     }
