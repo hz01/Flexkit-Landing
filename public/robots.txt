@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: Google-adstxt
 
 Sitemap: https://flexkit.net/sitemap.xml
