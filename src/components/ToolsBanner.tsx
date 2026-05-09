@@ -4,7 +4,7 @@ export default function ToolsBanner() {
   const year = new Date().getFullYear()
 
   return (
-    <section className="relative h-screen snap-start shrink-0 flex flex-col min-h-0 overflow-hidden px-6 md:px-12 lg:px-20 py-4 lg:py-0">
+    <section className="relative h-screen snap-start snap-always shrink-0 flex flex-col min-h-0 overflow-hidden px-6 md:px-12 lg:px-20 py-4 lg:py-0">
 
       {/* Main content (scroll if card + header exceed viewport) */}
       <div className="flex-1 min-h-0 overflow-y-auto flex flex-col justify-center max-w-7xl mx-auto w-full pb-4">
