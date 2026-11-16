@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Flexkit – Small apps. One job each.</title>
-<meta name="description" content="Flexkit makes small, focused apps: Swipr cleans your photo gallery, Scribr turns speech into text on your phone, SubTrakr tracks your subscriptions and Loadr downloads big files fast.">
+<title>Flexkit – Small Apps That Do One Job Well</title>
+<meta name="description" content="Flexkit makes focused apps: Swipr cleans your photo gallery, Scribr transcribes speech offline, SubTrakr tracks subscriptions and Loadr downloads big files fast.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="Flexkit">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F4F6F4" media="(prefers-color-scheme: light)">
@@ -14,13 +15,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://flexkit.net/">
 <meta property="og:site_name" content="Flexkit">
-<meta property="og:title" content="Flexkit – Small apps. One job each.">
+<meta property="og:title" content="Flexkit – Small Apps That Do One Job Well">
 <meta property="og:description" content="Swipr, Scribr, SubTrakr and Loadr: small, focused apps for your phone and your desktop.">
 <meta property="og:image" content="https://flexkit.net/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Flexkit – Small apps. One job each.">
+<meta name="twitter:title" content="Flexkit – Small Apps That Do One Job Well">
 <meta name="twitter:description" content="Swipr, Scribr, SubTrakr and Loadr: small, focused apps for your phone and your desktop.">
 <meta name="twitter:image" content="https://flexkit.net/og-image.png">
 
@@ -33,61 +34,76 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://flexkit.net/#organization",
+   "name": "Flexkit",
+   "url": "https://flexkit.net/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://flexkit.net/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+   },
+   "email": "teamflexkit@gmail.com",
+   "description": "Flexkit makes small, focused apps for phones and desktops."
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://flexkit.net/#website",
+   "url": "https://flexkit.net/",
+   "name": "Flexkit",
+   "alternateName": "Flexkit Apps",
+   "publisher": {
+    "@id": "https://flexkit.net/#organization"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "ItemList",
+   "name": "Flexkit apps",
+   "itemListElement": [
     {
-      "@type": "Organization",
-      "@id": "https://flexkit.net/#organization",
-      "name": "Flexkit",
-      "url": "https://flexkit.net",
-      "logo": "https://flexkit.net/apple-touch-icon.png",
-      "email": "teamflexkit@gmail.com",
-      "description": "Flexkit makes small, focused apps for phones and desktops."
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Swipr",
+     "url": "https://flexkit.net/swipr/"
     },
     {
-      "@type": "WebSite",
-      "@id": "https://flexkit.net/#website",
-      "url": "https://flexkit.net",
-      "name": "Flexkit",
-      "publisher": { "@id": "https://flexkit.net/#organization" }
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Scribr",
+     "url": "https://flexkit.net/scribr/"
     },
     {
-      "@type": "MobileApplication",
-      "name": "Swipr",
-      "operatingSystem": "Android, iOS",
-      "applicationCategory": "UtilitiesApplication",
-      "description": "Swipe to keep or delete photos, find duplicates and free up storage.",
-      "url": "https://flexkit.net/#swipr",
-      "publisher": { "@id": "https://flexkit.net/#organization" }
+     "@type": "ListItem",
+     "position": 3,
+     "name": "SubTrakr",
+     "url": "https://flexkit.net/subtrakr/"
     },
     {
-      "@type": "MobileApplication",
-      "name": "Scribr",
-      "operatingSystem": "Android",
-      "applicationCategory": "ProductivityApplication",
-      "description": "Private, on-device transcription and translation.",
-      "url": "https://flexkit.net/#scribr",
-      "publisher": { "@id": "https://flexkit.net/#organization" }
-    },
-    {
-      "@type": "MobileApplication",
-      "name": "SubTrakr",
-      "operatingSystem": "Android",
-      "applicationCategory": "FinanceApplication",
-      "description": "Track every subscription, your monthly spending and upcoming renewals.",
-      "url": "https://flexkit.net/#subtrakr",
-      "publisher": { "@id": "https://flexkit.net/#organization" }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "Loadr",
-      "operatingSystem": "Windows, macOS, Linux",
-      "applicationCategory": "UtilitiesApplication",
-      "description": "A fast download manager with multi-connection downloads and crash-safe resume.",
-      "url": "https://loadr.flexkit.net/",
-      "publisher": { "@id": "https://flexkit.net/#organization" }
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Loadr",
+     "url": "https://loadr.flexkit.net/"
     }
-  ]
+   ]
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "Loadr",
+   "operatingSystem": "Windows, macOS, Linux",
+   "applicationCategory": "UtilitiesApplication",
+   "description": "A fast download manager with multi-connection downloads and crash-safe resume.",
+   "url": "https://loadr.flexkit.net/",
+   "image": "https://flexkit.net/img/loadr-512.png",
+   "publisher": {
+    "@id": "https://flexkit.net/#organization"
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -100,10 +116,10 @@
       <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="13" height="13" rx="4" fill="var(--c-swipr)"/><rect x="17" y="2" width="13" height="13" rx="4" fill="var(--c-scribr)"/><rect x="2" y="17" width="13" height="13" rx="4" fill="var(--c-subtrakr)"/><rect x="17" y="17" width="13" height="13" rx="4" fill="var(--c-loadr)"/></svg>
       <span>flexkit</span>
     </a>
-    <nav class="top-nav" aria-label="Products">
-      <a href="#swipr">Swipr</a>
-      <a href="#scribr">Scribr</a>
-      <a href="#subtrakr">SubTrakr</a>
+    <nav class="top-nav" aria-label="Apps">
+      <a href="/swipr/">Swipr</a>
+      <a href="/scribr/">Scribr</a>
+      <a href="/subtrakr/">SubTrakr</a>
       <a href="#loadr">Loadr</a>
       <a class="nav-contact" href="#contact">Contact</a>
     </nav>
@@ -124,7 +140,7 @@
     <ul class="kit" aria-label="The Flexkit apps">
       <li>
         <a class="tile" href="#swipr" style="--p:var(--c-swipr)">
-          <img class="icon" src="/img/swipr.webp" alt="" width="72" height="72">
+          <img class="icon" src="/img/swipr.webp" alt="Swipr app icon" width="72" height="72">
           <span class="tile-name">Swipr</span>
           <span class="tile-job">Clean your photo gallery</span>
           <span class="tile-os">Android · iOS</span>
@@ -132,7 +148,7 @@
       </li>
       <li>
         <a class="tile" href="#scribr" style="--p:var(--c-scribr)">
-          <img class="icon" src="/img/scribr.webp" alt="" width="72" height="72">
+          <img class="icon" src="/img/scribr.webp" alt="Scribr app icon" width="72" height="72">
           <span class="tile-name">Scribr</span>
           <span class="tile-job">Turn speech into text</span>
           <span class="tile-os">Android</span>
@@ -140,7 +156,7 @@
       </li>
       <li>
         <a class="tile" href="#subtrakr" style="--p:var(--c-subtrakr)">
-          <img class="icon" src="/img/subtrakr.webp" alt="" width="72" height="72">
+          <img class="icon" src="/img/subtrakr.webp" alt="SubTrakr app icon" width="72" height="72">
           <span class="tile-name">SubTrakr</span>
           <span class="tile-job">Track your subscriptions</span>
           <span class="tile-os">Android</span>
@@ -148,7 +164,7 @@
       </li>
       <li>
         <a class="tile" href="#loadr" style="--p:var(--c-loadr)">
-          <img class="icon bare" src="/img/loadr.webp" alt="" width="72" height="72">
+          <img class="icon bare" src="/img/loadr.webp" alt="Loadr app icon" width="72" height="72">
           <span class="tile-name">Loadr</span>
           <span class="tile-job">Download big files fast</span>
           <span class="tile-os">Windows · macOS · Linux</span>
@@ -162,7 +178,7 @@
 <section class="product" id="swipr" style="--p:var(--c-swipr)">
   <div class="wrap product-in">
     <div class="p-text">
-      <p class="p-head"><img class="icon" src="/img/swipr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>Swipr</strong><small>Gallery cleaner · Android and iOS</small></span></p>
+      <p class="p-head"><img class="icon" src="/img/swipr.webp" alt="Swipr app icon" width="44" height="44" loading="lazy"><span><strong>Swipr</strong><small>Gallery cleaner · Android and iOS</small></span></p>
       <h2>Clean your gallery, one swipe at a time.</h2>
       <p class="p-lead">Swipe right to keep a photo, left to delete it. Nothing is removed straight away: deleted photos wait in a trash you can review and restore from.</p>
       <ul class="facts">
@@ -174,7 +190,7 @@
         <a class="btn primary" href="https://apps.apple.com/us/app/swipr-smart-gallery-cleaner/id6762634232" rel="noopener">Download on the App Store</a>
         <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.swipr" rel="noopener">Get it on Google Play</a>
       </div>
-      <p class="p-foot"><a href="https://swipr-privacy.flexkit.net" rel="noopener">Swipr privacy policy</a></p>
+      <p class="p-foot"><a href="/swipr/">All Swipr features and questions</a> · <a href="https://swipr-privacy.flexkit.net" rel="noopener">Privacy policy</a></p>
     </div>
 
     <figure class="demo">
@@ -201,7 +217,7 @@
 <section class="product flip" id="scribr" style="--p:var(--c-scribr)">
   <div class="wrap product-in">
     <div class="p-text">
-      <p class="p-head"><img class="icon" src="/img/scribr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>Scribr</strong><small>Transcription and translation · Android</small></span></p>
+      <p class="p-head"><img class="icon" src="/img/scribr.webp" alt="Scribr app icon" width="44" height="44" loading="lazy"><span><strong>Scribr</strong><small>Transcription and translation · Android</small></span></p>
       <h2>Speech to text that never leaves your phone.</h2>
       <p class="p-lead">Record or import audio and Scribr transcribes and translates it on the device. Once the speech models are downloaded it works offline, with no account.</p>
       <ul class="facts">
@@ -212,7 +228,7 @@
       <div class="ctas">
         <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.scribr" rel="noopener">Get it on Google Play</a>
       </div>
-      <p class="p-foot"><a href="https://scribr-privacy.flexkit.net" rel="noopener">Scribr privacy policy</a></p>
+      <p class="p-foot"><a href="/scribr/">All Scribr features and questions</a> · <a href="https://scribr-privacy.flexkit.net" rel="noopener">Privacy policy</a></p>
     </div>
 
     <figure class="demo">
@@ -235,7 +251,7 @@
 <section class="product" id="subtrakr" style="--p:var(--c-subtrakr)">
   <div class="wrap product-in">
     <div class="p-text">
-      <p class="p-head"><img class="icon" src="/img/subtrakr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>SubTrakr</strong><small>Subscription tracker · Android</small></span></p>
+      <p class="p-head"><img class="icon" src="/img/subtrakr.webp" alt="SubTrakr app icon" width="44" height="44" loading="lazy"><span><strong>SubTrakr</strong><small>Subscription tracker · Android</small></span></p>
       <h2>Know what you pay for, before you pay again.</h2>
       <p class="p-lead">Every subscription in one list, with your monthly total, a budget to hold it to and a reminder ahead of each billing date.</p>
       <ul class="facts">
@@ -246,7 +262,7 @@
       <div class="ctas">
         <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.subtrakr" rel="noopener">Get it on Google Play</a>
       </div>
-      <p class="p-foot"><a href="https://subtrakr-privacy.flexkit.net" rel="noopener">SubTrakr privacy policy</a></p>
+      <p class="p-foot"><a href="/subtrakr/">All SubTrakr features and questions</a> · <a href="https://subtrakr-privacy.flexkit.net" rel="noopener">Privacy policy</a></p>
     </div>
 
     <figure class="demo">
@@ -270,7 +286,7 @@
 <section class="product wide" id="loadr" style="--p:var(--c-loadr)">
   <div class="wrap product-in">
     <div class="p-text">
-      <p class="p-head"><img class="icon bare" src="/img/loadr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>Loadr</strong><small>Download manager · Windows, macOS and Linux</small></span></p>
+      <p class="p-head"><img class="icon bare" src="/img/loadr.webp" alt="Loadr app icon" width="44" height="44" loading="lazy"><span><strong>Loadr</strong><small>Download manager · Windows, macOS and Linux</small></span></p>
       <h2>Big files, done fast.</h2>
       <p class="p-lead">Loadr splits every file into pieces, fetches them over many connections at once and puts them back together byte for byte. Close the app, lose your Wi-Fi, restart: it picks up exactly where it stopped.</p>
       <div class="ctas">
@@ -338,9 +354,9 @@
     </div>
     <nav aria-label="Apps">
       <h4>Apps</h4>
-      <a href="#swipr">Swipr</a>
-      <a href="#scribr">Scribr</a>
-      <a href="#subtrakr">SubTrakr</a>
+      <a href="/swipr/">Swipr</a>
+      <a href="/scribr/">Scribr</a>
+      <a href="/subtrakr/">SubTrakr</a>
       <a href="https://loadr.flexkit.net/" rel="noopener">Loadr</a>
     </nav>
     <nav aria-label="Privacy policies">
