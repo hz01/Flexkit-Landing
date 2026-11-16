@@ -1,4 +1,4 @@
-/* Layout: a "kit tray" hero (2×2 of the four apps), then one full-width band per app,
+/* Layout: a "kit tray" hero (a grid of the apps), then one full-width band per app,
    each tinted with that app's own colour and carrying a small working demo of the app. */
 
 @font-face { font-family: "Bricolage Grotesque"; src: url("/fonts/bricolage.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
