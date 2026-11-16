@@ -1,133 +1,364 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flexkit – Four apps. One job each.</title>
+<meta name="description" content="Flexkit makes small, focused apps: Swipr cleans your photo gallery, Scribr turns speech into text on your phone, SubTrakr tracks your subscriptions and Loadr downloads big files fast.">
+<meta name="author" content="Flexkit">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F6F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0E0D" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://flexkit.net/">
 
-    <!-- Primary Meta Tags -->
-    <title>Flexkit: Apps for everyday life</title>
-    <meta name="title" content="Flexkit: Apps for everyday life" />
-    <meta name="description" content="Beautifully simple apps built for everyday life. Swipr for task management, SubTrakr for subscription tracking, Scribr for voice transcription, and Flexkit Tools for free web utilities." />
-    <meta name="keywords" content="Flexkit, Swipr, SubTrakr, Scribr, Flexkit Tools, mobile apps, Android, iOS, task manager, subscription tracker, voice transcription, web tools, productivity apps" />
-    <meta name="author" content="Flexkit" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://flexkit.net/" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flexkit.net/">
+<meta property="og:site_name" content="Flexkit">
+<meta property="og:title" content="Flexkit – Four apps. One job each.">
+<meta property="og:description" content="Swipr, Scribr, SubTrakr and Loadr: small, focused apps for your phone and your desktop.">
+<meta property="og:image" content="https://flexkit.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flexkit – Four apps. One job each.">
+<meta name="twitter:description" content="Swipr, Scribr, SubTrakr and Loadr: small, focused apps for your phone and your desktop.">
+<meta name="twitter:image" content="https://flexkit.net/og-image.png">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://flexkit.net/" />
-    <meta property="og:site_name" content="Flexkit" />
-    <meta property="og:title" content="Flexkit: Apps for everyday life" />
-    <meta property="og:description" content="Beautifully simple apps built for everyday life. Swipr, SubTrakr, Scribr, and Flexkit Tools." />
-    <meta property="og:image" content="https://flexkit.net/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Flexkit: Apps for everyday life" />
-    <meta property="og:locale" content="en_US" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://flexkit.net/" />
-    <meta name="twitter:title" content="Flexkit: Apps for everyday life" />
-    <meta name="twitter:description" content="Beautifully simple apps built for everyday life. Swipr, SubTrakr, Scribr, and Flexkit Tools." />
-    <meta name="twitter:image" content="https://flexkit.net/og-image.png" />
-    <meta name="twitter:image:alt" content="Flexkit: Apps for everyday life" />
-
-    <!-- Theme & PWA -->
-    <meta name="theme-color" content="#06060f" />
-    <meta name="msapplication-TileColor" content="#06060f" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Flexkit" />
-    <link rel="manifest" href="/manifest.json" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" /></noscript>
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3068160663396547" crossorigin="anonymous"></script>
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://flexkit.net/#organization",
-          "name": "Flexkit",
-          "url": "https://flexkit.net",
-          "email": "teamflexkit@gmail.com",
-          "description": "Beautifully simple apps built for everyday life."
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://flexkit.net/#website",
-          "url": "https://flexkit.net",
-          "name": "Flexkit",
-          "publisher": { "@id": "https://flexkit.net/#organization" }
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://flexkit.net/#webpage",
-          "url": "https://flexkit.net",
-          "name": "Flexkit: Apps for everyday life",
-          "description": "Beautifully simple apps built for everyday life.",
-          "isPartOf": { "@id": "https://flexkit.net/#website" }
-        },
-        {
-          "@type": "MobileApplication",
-          "name": "Swipr",
-          "description": "Swipe to keep or delete photos, just like Tinder. Declutter your gallery fast, and find duplicates with one tap.",
-          "operatingSystem": "Android, iOS",
-          "applicationCategory": "ProductivityApplication",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://play.google.com/store/apps/details?id=com.flexkit.swipr",
-          "author": { "@id": "https://flexkit.net/#organization" }
-        },
-        {
-          "@type": "MobileApplication",
-          "name": "SubTrakr",
-          "description": "Track every subscription in one place. Monitor spending, get renewal reminders, and stay in control.",
-          "operatingSystem": "Android",
-          "applicationCategory": "FinanceApplication",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://play.google.com/store/apps/details?id=com.flexkit.subtrakr",
-          "author": { "@id": "https://flexkit.net/#organization" }
-        },
-        {
-          "@type": "MobileApplication",
-          "name": "Scribr",
-          "description": "Transcribe your voice in real time with precision. Capture meetings, ideas, and notes hands-free.",
-          "operatingSystem": "Android",
-          "applicationCategory": "ProductivityApplication",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "url": "https://play.google.com/store/apps/details?id=com.flexkit.scribr",
-          "author": { "@id": "https://flexkit.net/#organization" }
-        },
-        {
-          "@type": "WebApplication",
-          "name": "Flexkit Tools",
-          "description": "Powerful browser-based utilities. Always free, no install, no account needed.",
-          "url": "https://tools.flexkit.net",
-          "applicationCategory": "UtilitiesApplication",
-          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "author": { "@id": "https://flexkit.net/#organization" }
-        }
-      ]
+      "@type": "Organization",
+      "@id": "https://flexkit.net/#organization",
+      "name": "Flexkit",
+      "url": "https://flexkit.net",
+      "logo": "https://flexkit.net/apple-touch-icon.png",
+      "email": "teamflexkit@gmail.com",
+      "description": "Flexkit makes small, focused apps for phones and desktops."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://flexkit.net/#website",
+      "url": "https://flexkit.net",
+      "name": "Flexkit",
+      "publisher": { "@id": "https://flexkit.net/#organization" }
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Swipr",
+      "operatingSystem": "Android, iOS",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Swipe to keep or delete photos, find duplicates and free up storage.",
+      "url": "https://flexkit.net/#swipr",
+      "publisher": { "@id": "https://flexkit.net/#organization" }
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Scribr",
+      "operatingSystem": "Android",
+      "applicationCategory": "ProductivityApplication",
+      "description": "Private, on-device transcription and translation.",
+      "url": "https://flexkit.net/#scribr",
+      "publisher": { "@id": "https://flexkit.net/#organization" }
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "SubTrakr",
+      "operatingSystem": "Android",
+      "applicationCategory": "FinanceApplication",
+      "description": "Track every subscription, your monthly spending and upcoming renewals.",
+      "url": "https://flexkit.net/#subtrakr",
+      "publisher": { "@id": "https://flexkit.net/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Loadr",
+      "operatingSystem": "Windows, macOS, Linux",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "A fast download manager with multi-connection downloads and crash-safe resume.",
+      "url": "https://loadr.flexkit.net/",
+      "publisher": { "@id": "https://flexkit.net/#organization" }
     }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/" aria-label="Flexkit home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="13" height="13" rx="4" fill="var(--c-swipr)"/><rect x="17" y="2" width="13" height="13" rx="4" fill="var(--c-scribr)"/><rect x="2" y="17" width="13" height="13" rx="4" fill="var(--c-subtrakr)"/><rect x="17" y="17" width="13" height="13" rx="4" fill="var(--c-loadr)"/></svg>
+      <span>flexkit</span>
+    </a>
+    <nav class="top-nav" aria-label="Products">
+      <a href="#swipr">Swipr</a>
+      <a href="#scribr">Scribr</a>
+      <a href="#subtrakr">SubTrakr</a>
+      <a href="#loadr">Loadr</a>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────── Hero ───────────── -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="eyebrow">Flexkit makes apps</p>
+      <h1>Four apps.<br><span class="h1-b">One job each.</span></h1>
+      <p class="lead">Small, focused software for your phone and your desktop. Each app does one thing and does it properly. We left out the&nbsp;<em>e</em>, and everything else you don't need.</p>
+    </div>
+
+    <ul class="kit" aria-label="The Flexkit apps">
+      <li>
+        <a class="tile" href="#swipr" style="--p:var(--c-swipr)">
+          <img class="icon" src="/img/swipr.webp" alt="" width="72" height="72">
+          <span class="tile-name">Swipr</span>
+          <span class="tile-job">Clean your photo gallery</span>
+          <span class="tile-os">Android · iOS</span>
+        </a>
+      </li>
+      <li>
+        <a class="tile" href="#scribr" style="--p:var(--c-scribr)">
+          <img class="icon" src="/img/scribr.webp" alt="" width="72" height="72">
+          <span class="tile-name">Scribr</span>
+          <span class="tile-job">Turn speech into text</span>
+          <span class="tile-os">Android</span>
+        </a>
+      </li>
+      <li>
+        <a class="tile" href="#subtrakr" style="--p:var(--c-subtrakr)">
+          <img class="icon" src="/img/subtrakr.webp" alt="" width="72" height="72">
+          <span class="tile-name">SubTrakr</span>
+          <span class="tile-job">Track your subscriptions</span>
+          <span class="tile-os">Android</span>
+        </a>
+      </li>
+      <li>
+        <a class="tile" href="#loadr" style="--p:var(--c-loadr)">
+          <img class="icon bare" src="/img/loadr.webp" alt="" width="72" height="72">
+          <span class="tile-name">Loadr</span>
+          <span class="tile-job">Download big files fast</span>
+          <span class="tile-os">Windows · macOS · Linux</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ───────────── Swipr ───────────── -->
+<section class="product" id="swipr" style="--p:var(--c-swipr)">
+  <div class="wrap product-in">
+    <div class="p-text">
+      <p class="p-head"><img class="icon" src="/img/swipr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>Swipr</strong><small>Gallery cleaner · Android and iOS</small></span></p>
+      <h2>Clean your gallery, one swipe at a time.</h2>
+      <p class="p-lead">Swipe right to keep a photo, left to delete it. Nothing is removed straight away: deleted photos wait in a trash you can review and restore from.</p>
+      <ul class="facts">
+        <li><strong>Finds duplicates.</strong> Burst shots, edits and re-saves are grouped for you.</li>
+        <li><strong>Photos and videos.</strong> Review newest first, oldest first or at random.</li>
+        <li><strong>Always recoverable.</strong> Storage is only freed when you empty the trash.</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn primary" href="https://apps.apple.com/us/app/swipr-smart-gallery-cleaner/id6762634232" rel="noopener">Download on the App Store</a>
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.swipr" rel="noopener">Get it on Google Play</a>
+      </div>
+      <p class="p-foot"><a href="https://swipr-privacy.flexkit.net" rel="noopener">Swipr privacy policy</a></p>
+    </div>
+
+    <figure class="demo">
+      <div class="phone swipr-demo" id="swipr-demo">
+        <div class="ph-bar"><span id="sw-count">0 of 5 reviewed</span><span class="ph-pill" id="sw-trash">Trash · 0</span></div>
+        <div class="deck" id="sw-deck">
+          <div class="deck-done" id="sw-done" hidden>
+            <strong>All reviewed</strong>
+            <span id="sw-summary"></span>
+            <button class="btn small" type="button" id="sw-reset">Start again</button>
+          </div>
+        </div>
+        <div class="deck-actions">
+          <button type="button" class="round del" id="sw-del" aria-label="Delete photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          <button type="button" class="round keep" id="sw-keep" aria-label="Keep photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        </div>
+      </div>
+      <figcaption>Try it: drag the photo, or use the buttons.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── Scribr ───────────── -->
+<section class="product flip" id="scribr" style="--p:var(--c-scribr)">
+  <div class="wrap product-in">
+    <div class="p-text">
+      <p class="p-head"><img class="icon" src="/img/scribr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>Scribr</strong><small>Transcription and translation · Android</small></span></p>
+      <h2>Speech to text that never leaves your phone.</h2>
+      <p class="p-lead">Record or import audio and Scribr transcribes and translates it on the device. Once the speech models are downloaded it works offline, with no account.</p>
+      <ul class="facts">
+        <li><strong>Two languages, one view.</strong> Original and translation together, highlighted in time with playback.</li>
+        <li><strong>Export anywhere.</strong> <span class="chips"><span>TXT</span><span>Markdown</span><span>SRT</span><span>PDF</span><span>JSON</span><span>CSV</span><span>HTML</span></span></li>
+        <li><strong>Locked if you want.</strong> Optional password encryption and a biometric app lock.</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.scribr" rel="noopener">Get it on Google Play</a>
+      </div>
+      <p class="p-foot"><a href="https://scribr-privacy.flexkit.net" rel="noopener">Scribr privacy policy</a></p>
+    </div>
+
+    <figure class="demo">
+      <div class="phone scribr-demo" id="scribr-demo">
+        <div class="ph-bar"><span>Interview, take 2</span><span class="ph-pill">On device</span></div>
+        <div class="wave" id="sc-wave" aria-hidden="true"></div>
+        <ol class="script" id="sc-script">
+          <li class="on"><time>00:04</time><p>So where did the idea come from?</p><p class="tr">Alors, d'où est venue l'idée&nbsp;?</p></li>
+          <li><time>00:09</time><p>My phone had nine thousand photos on it.</p><p class="tr">Mon téléphone contenait neuf mille photos.</p></li>
+          <li><time>00:15</time><p>Deleting them one by one felt like work.</p><p class="tr">Les supprimer une par une, c'était du travail.</p></li>
+          <li><time>00:21</time><p>So we made it feel like a game.</p><p class="tr">Alors on en a fait un jeu.</p></li>
+        </ol>
+      </div>
+      <figcaption>The transcript follows the audio, sentence by sentence.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── SubTrakr ───────────── -->
+<section class="product" id="subtrakr" style="--p:var(--c-subtrakr)">
+  <div class="wrap product-in">
+    <div class="p-text">
+      <p class="p-head"><img class="icon" src="/img/subtrakr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>SubTrakr</strong><small>Subscription tracker · Android</small></span></p>
+      <h2>Know what you pay for, before you pay again.</h2>
+      <p class="p-lead">Every subscription in one list, with your monthly total, a budget to hold it to and a reminder ahead of each billing date.</p>
+      <ul class="facts">
+        <li><strong>Free trials, tracked.</strong> See the day a trial turns into a bill.</li>
+        <li><strong>Any cycle, any currency.</strong> Weekly, yearly or every 45 days, shown in the currency you choose.</li>
+        <li><strong>Payment history and statistics,</strong> in 20 languages.</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.subtrakr" rel="noopener">Get it on Google Play</a>
+      </div>
+      <p class="p-foot"><a href="https://subtrakr-privacy.flexkit.net" rel="noopener">SubTrakr privacy policy</a></p>
+    </div>
+
+    <figure class="demo">
+      <div class="phone subtrakr-demo" id="subtrakr-demo">
+        <div class="ph-bar"><span>Monthly spending</span><span class="ph-pill" id="st-state">80% used</span></div>
+        <p class="total"><span id="st-total">€47.96</span><small>of €60.00 budget</small></p>
+        <div class="budget" aria-hidden="true"><i id="st-bar" style="width:80%"></i></div>
+        <ul class="subs" id="st-list">
+          <li><button type="button" aria-pressed="false" data-price="10.99"><i style="--d:#E5484D">M</i><span><b>Music streaming</b><small>Monthly · <em>due tomorrow</em></small></span><span class="amt">€10.99</span></button></li>
+          <li><button type="button" aria-pressed="false" data-price="13.99"><i style="--d:#7C5CFF">V</i><span><b>Video streaming</b><small>Monthly · due in 9 days</small></span><span class="amt">€13.99</span></button></li>
+          <li><button type="button" aria-pressed="false" data-price="19.99"><i style="--d:#F29D38">G</i><span><b>Gym</b><small>Monthly · due in 12 days</small></span><span class="amt">€19.99</span></button></li>
+          <li><button type="button" aria-pressed="false" data-price="2.99"><i style="--d:#2F9BFF">C</i><span><b>Cloud storage</b><small>Monthly · due in 20 days</small></span><span class="amt">€2.99</span></button></li>
+        </ul>
+      </div>
+      <figcaption>Try it: tap a subscription to pause it.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── Loadr ───────────── -->
+<section class="product wide" id="loadr" style="--p:var(--c-loadr)">
+  <div class="wrap product-in">
+    <div class="p-text">
+      <p class="p-head"><img class="icon bare" src="/img/loadr.webp" alt="" width="44" height="44" loading="lazy"><span><strong>Loadr</strong><small>Download manager · Windows, macOS and Linux</small></span></p>
+      <h2>Big files, done fast.</h2>
+      <p class="p-lead">Loadr splits every file into pieces, fetches them over many connections at once and puts them back together byte for byte. Close the app, lose your Wi-Fi, restart: it picks up exactly where it stopped.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://loadr.flexkit.net/" rel="noopener">Visit loadr.flexkit.net</a>
+        <span class="soon">Coming soon to the Microsoft Store and the Mac App Store</span>
+      </div>
+    </div>
+    <dl class="stats">
+      <div><dt>32</dt><dd>connections per file</dd></div>
+      <div><dt>0</dt><dd>bytes lost when it stops</dd></div>
+      <div><dt>~25&nbsp;MB</dt><dd>of memory</dd></div>
+      <div><dt>0</dt><dd>trackers, ads or accounts</dd></div>
+    </dl>
+    <figure class="shot">
+      <picture>
+        <source srcset="/img/loadr-dark.webp" media="(prefers-color-scheme: dark)">
+        <img src="/img/loadr-light.webp" alt="The Loadr window with several downloads in progress" width="1000" height="616" loading="lazy" decoding="async">
+      </picture>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────────── Principles ───────────── -->
+<section class="how">
+  <div class="wrap">
+    <h2>How Flexkit builds.</h2>
+    <div class="how-grid">
+      <div>
+        <h3>One job per app</h3>
+        <p>A gallery cleaner cleans the gallery. A download manager downloads. No feeds, no bundles, no feature you have to learn to ignore.</p>
+      </div>
+      <div>
+        <h3>Your data stays put</h3>
+        <p>Scribr transcribes on the phone. Loadr collects nothing at all. Swipr keeps every deleted photo in a trash until you empty it.</p>
+      </div>
+      <div>
+        <h3>Made for the device</h3>
+        <p>Native apps for Android, iOS, Windows, macOS and Linux, built to look and feel at home on each one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Contact ───────────── -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-in">
+      <h2>Questions, bugs, ideas?</h2>
+      <p>Write to us. A person reads every message.</p>
+      <a class="mail" href="mailto:teamflexkit@gmail.com">teamflexkit@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <a class="brand" href="/" aria-label="Flexkit home">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="13" height="13" rx="4" fill="var(--c-swipr)"/><rect x="17" y="2" width="13" height="13" rx="4" fill="var(--c-scribr)"/><rect x="2" y="17" width="13" height="13" rx="4" fill="var(--c-subtrakr)"/><rect x="17" y="17" width="13" height="13" rx="4" fill="var(--c-loadr)"/></svg>
+        <span>flexkit</span>
+      </a>
+      <p>This website uses no cookies, no analytics and no third-party requests.</p>
+    </div>
+    <nav aria-label="Apps">
+      <h4>Apps</h4>
+      <a href="#swipr">Swipr</a>
+      <a href="#scribr">Scribr</a>
+      <a href="#subtrakr">SubTrakr</a>
+      <a href="https://loadr.flexkit.net/" rel="noopener">Loadr</a>
+    </nav>
+    <nav aria-label="Privacy policies">
+      <h4>Privacy</h4>
+      <a href="https://swipr-privacy.flexkit.net" rel="noopener">Swipr</a>
+      <a href="https://scribr-privacy.flexkit.net" rel="noopener">Scribr</a>
+      <a href="https://subtrakr-privacy.flexkit.net" rel="noopener">SubTrakr</a>
+      <a href="https://loadr.flexkit.net/privacy/" rel="noopener">Loadr</a>
+    </nav>
+    <nav aria-label="Company">
+      <h4>Flexkit</h4>
+      <a href="mailto:teamflexkit@gmail.com">Contact</a>
+      <a href="https://loadr.flexkit.net/support/" rel="noopener">Loadr support</a>
+    </nav>
+  </div>
+  <div class="wrap"><div class="foot-base"><span>© 2026 Flexkit</span><span>Swipr, Scribr, SubTrakr and Loadr are products of Flexkit.</span></div></div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
 </html>
