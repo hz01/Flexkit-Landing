@@ -1,7 +1,0 @@
-services:
-  flexkit-landing:
-    build: .
-    container_name: flexkit-landing
-    ports:
-      - "13002:13002"
-    restart: unless-stopped
