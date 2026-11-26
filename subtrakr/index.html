@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=409369d107">
+<link rel="stylesheet" href="/style.css?v=87e325619d">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -145,14 +145,31 @@
 <section class="product app-hero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Flexkit</a><span aria-hidden="true">/</span><span aria-current="page">SubTrakr</span></nav>
-    <img class="icon app-icon" src="/img/subtrakr.webp?v=092b2afd80" alt="SubTrakr app icon" width="96" height="96">
-    <p class="eyebrow">Subscription tracker for Android</p>
-    <h1>Know what you pay for, before you pay again.</h1>
-    <p class="lead">SubTrakr keeps every subscription in one list: streaming, software, gym, insurance. You see what it all costs per month, and you get a reminder before each one renews, in time to cancel.</p>
-    <div class="ctas"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.subtrakr" rel="noopener">Get it on Google Play</a></div>
+    <div class="product-in">
+      <div class="p-text">
+        <img class="icon app-icon" src="/img/subtrakr.webp?v=092b2afd80" alt="SubTrakr app icon" width="96" height="96">
+        <p class="eyebrow">Subscription tracker for Android</p>
+        <h1>Know what you pay for, before you pay again.</h1>
+        <p class="lead">SubTrakr keeps every subscription in one list: streaming, software, gym, insurance. You see what it all costs per month, and you get a reminder before each one renews, in time to cancel.</p>
+        <div class="ctas"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.subtrakr" rel="noopener">Get it on Google Play</a></div>
+      </div>
+      <figure class="demo">
+      <div class="phone subtrakr-demo" id="subtrakr-demo">
+        <div class="ph-bar"><span>Monthly spending</span><span class="ph-pill" id="st-state">80% used</span></div>
+        <p class="total"><span id="st-total">€47.96</span><small>of €60.00 budget</small></p>
+        <div class="budget" aria-hidden="true"><i id="st-bar" style="width:80%"></i></div>
+        <ul class="subs" id="st-list">
+          <li><button type="button" aria-pressed="false" data-price="10.99"><i style="--d:#E5484D">M</i><span><b>Music streaming</b><small>Monthly · <em>due tomorrow</em></small></span><span class="amt">€10.99</span></button></li>
+          <li><button type="button" aria-pressed="false" data-price="13.99"><i style="--d:#7C5CFF">V</i><span><b>Video streaming</b><small>Monthly · due in 9 days</small></span><span class="amt">€13.99</span></button></li>
+          <li><button type="button" aria-pressed="false" data-price="19.99"><i style="--d:#F29D38">G</i><span><b>Gym</b><small>Monthly · due in 12 days</small></span><span class="amt">€19.99</span></button></li>
+          <li><button type="button" aria-pressed="false" data-price="2.99"><i style="--d:#2F9BFF">C</i><span><b>Cloud storage</b><small>Monthly · due in 20 days</small></span><span class="amt">€2.99</span></button></li>
+        </ul>
+      </div>
+      <figcaption>Try it: tap a subscription to pause it.</figcaption>
+    </figure>
+    </div>
   </div>
 </section>
-
 <section class="feats">
   <div class="wrap">
     <h2>What SubTrakr does</h2>
@@ -228,5 +245,6 @@
   </div>
   <div class="wrap"><div class="foot-base"><span>© 2026 Flexkit</span><span>Swipr, Scribr, SubTrakr and Loadr are products of Flexkit.</span></div></div>
 </footer>
+<script src="/main.js?v=d29fdc5a27" defer></script>
 </body>
 </html>

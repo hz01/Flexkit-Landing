@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=409369d107">
+<link rel="stylesheet" href="/style.css?v=87e325619d">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -144,16 +144,30 @@
 <section class="product app-hero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Flexkit</a><span aria-hidden="true">/</span><span aria-current="page">Scribr</span></nav>
-    <img class="icon app-icon" src="/img/scribr.webp?v=fcaecc3116" alt="Scribr app icon" width="96" height="96">
-    <p class="eyebrow">Transcription and translation for Android</p>
-    <h1>Speech to text that never leaves your phone.</h1>
-    <p class="lead">Scribr transcribes and translates audio on the device. Record a lecture, an interview or a meeting, or import a voice message, and get searchable text without sending your recording to a cloud service.</p>
-    <div class="ctas"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.scribr" rel="noopener">Get it on Google Play</a></div>
+    <div class="product-in">
+      <div class="p-text">
+        <img class="icon app-icon" src="/img/scribr.webp?v=fcaecc3116" alt="Scribr app icon" width="96" height="96">
+        <p class="eyebrow">Transcription and translation for Android</p>
+        <h1>Speech to text that never leaves your phone.</h1>
+        <p class="lead">Scribr transcribes and translates audio on the device. Record a lecture, an interview or a meeting, or import a voice message, and get searchable text without sending your recording to a cloud service.</p>
+        <div class="ctas"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.scribr" rel="noopener">Get it on Google Play</a></div>
+      </div>
+      <figure class="demo">
+      <div class="phone scribr-demo" id="scribr-demo">
+        <div class="ph-bar"><span>Interview, take 2</span><span class="ph-pill">On device</span></div>
+        <div class="wave" id="sc-wave" aria-hidden="true"></div>
+        <ol class="script" id="sc-script">
+          <li class="on"><time>00:04</time><p>So where did the idea come from?</p><p class="tr">Alors, d'où est venue l'idée&nbsp;?</p></li>
+          <li><time>00:09</time><p>My phone had nine thousand photos on it.</p><p class="tr">Mon téléphone contenait neuf mille photos.</p></li>
+          <li><time>00:15</time><p>Deleting them one by one felt like work.</p><p class="tr">Les supprimer une par une, c'était du travail.</p></li>
+          <li><time>00:21</time><p>So we made it feel like a game.</p><p class="tr">Alors on en a fait un jeu.</p></li>
+        </ol>
+      </div>
+      <figcaption>The transcript follows the audio, sentence by sentence.</figcaption>
+    </figure>
+    </div>
   </div>
 </section>
-
-<section class="shots" aria-label="Screenshots"><div class="wrap shots-in"><img src="/img/scribr-record.webp?v=af0812f2c1" alt="Recording screen in Scribr" width="564" height="1002" loading="lazy" decoding="async"><img src="/img/scribr-library.webp?v=8e70b9b143" alt="The Scribr library of recordings" width="564" height="1002" loading="lazy" decoding="async"><img src="/img/scribr-bilingual.webp?v=327453ab7c" alt="Transcript and translation shown together in Scribr" width="564" height="1002" loading="lazy" decoding="async"><img src="/img/scribr-private.webp?v=3cb2e9da39" alt="Scribr processes audio on the device" width="564" height="1002" loading="lazy" decoding="async"></div></section>
-
 <section class="feats">
   <div class="wrap">
     <h2>What Scribr does</h2>
@@ -228,5 +242,6 @@
   </div>
   <div class="wrap"><div class="foot-base"><span>© 2026 Flexkit</span><span>Swipr, Scribr, SubTrakr and Loadr are products of Flexkit.</span></div></div>
 </footer>
+<script src="/main.js?v=d29fdc5a27" defer></script>
 </body>
 </html>

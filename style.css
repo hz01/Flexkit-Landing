@@ -281,16 +281,13 @@ h2 { font-size: clamp(34px, 4.6vw, 58px); line-height: 1.02; letter-spacing: -0.
 
 /* ── App pages ── */
 .app-hero { border-top: 0; padding-block: clamp(28px, 4vw, 44px) clamp(56px, 8vw, 96px); }
-.app-hero h1 { font-size: clamp(40px, 6vw, 76px); line-height: .98; max-width: 14em; }
+.app-hero h1 { font-size: clamp(38px, 5vw, 64px); line-height: 1; max-width: 14em; }
 .app-hero .lead { max-width: 36em; }
-.app-icon { width: 96px; height: 96px; margin-block: clamp(32px, 5vw, 56px) 24px; }
+.app-icon { width: 80px; height: 80px; margin-bottom: 24px; }
+.app-hero .product-in { margin-top: clamp(28px, 4vw, 48px); }
 .crumbs { display: flex; gap: 8px; font-size: 14px; color: var(--muted); }
 .crumbs a { text-underline-offset: 3px; }
 .crumbs a:hover { color: var(--ink); }
-.shots { background: color-mix(in oklab, var(--p) var(--tint), var(--bg)); padding-bottom: clamp(56px, 8vw, 96px); }
-.shots-in { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 2vw, 24px); }
-.shots img { width: 100%; border-radius: clamp(12px, 2vw, 24px); box-shadow: var(--shadow); }
-@media (max-width: 640px) { .shots-in { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .feats { padding-block: clamp(64px, 9vw, 112px); border-top: 1px solid var(--line); }
 .feats h3 { font-size: 21px; letter-spacing: -0.02em; font-weight: 700; padding-top: 18px; border-top: 2px solid var(--p); }
 .feats p { margin-top: 10px; color: var(--muted); font-size: 16.5px; }

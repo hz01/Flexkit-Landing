@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=409369d107">
+<link rel="stylesheet" href="/style.css?v=87e325619d">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -144,14 +144,34 @@
 <section class="product app-hero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Flexkit</a><span aria-hidden="true">/</span><span aria-current="page">Swipr</span></nav>
-    <img class="icon app-icon" src="/img/swipr.webp?v=4351f6a1a3" alt="Swipr app icon" width="96" height="96">
-    <p class="eyebrow">Gallery cleaner for Android and iPhone</p>
-    <h1>Clean your photo gallery, one swipe at a time.</h1>
-    <p class="lead">Swipr turns clearing out thousands of photos into something quick. Swipe right to keep, left to delete. Deleted photos wait in a trash you can review and restore from, so nothing disappears by accident.</p>
-    <div class="ctas"><a class="btn primary" href="https://apps.apple.com/us/app/swipr-smart-gallery-cleaner/id6762634232" rel="noopener">Download on the App Store</a><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.swipr" rel="noopener">Get it on Google Play</a></div>
+    <div class="product-in">
+      <div class="p-text">
+        <img class="icon app-icon" src="/img/swipr.webp?v=4351f6a1a3" alt="Swipr app icon" width="96" height="96">
+        <p class="eyebrow">Gallery cleaner for Android and iPhone</p>
+        <h1>Clean your photo gallery, one swipe at a time.</h1>
+        <p class="lead">Swipr turns clearing out thousands of photos into something quick. Swipe right to keep, left to delete. Deleted photos wait in a trash you can review and restore from, so nothing disappears by accident.</p>
+        <div class="ctas"><a class="btn primary" href="https://apps.apple.com/us/app/swipr-smart-gallery-cleaner/id6762634232" rel="noopener">Download on the App Store</a><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.flexkit.swipr" rel="noopener">Get it on Google Play</a></div>
+      </div>
+      <figure class="demo">
+      <div class="phone swipr-demo" id="swipr-demo">
+        <div class="ph-bar"><span id="sw-count">0 of 5 reviewed</span><span class="ph-pill" id="sw-trash">Trash · 0</span></div>
+        <div class="deck" id="sw-deck">
+          <div class="deck-done" id="sw-done" hidden>
+            <strong>All reviewed</strong>
+            <span id="sw-summary"></span>
+            <button class="btn small" type="button" id="sw-reset">Start again</button>
+          </div>
+        </div>
+        <div class="deck-actions">
+          <button type="button" class="round del" id="sw-del" aria-label="Delete photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          <button type="button" class="round keep" id="sw-keep" aria-label="Keep photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button>
+        </div>
+      </div>
+      <figcaption>Try it: drag the photo, or use the buttons.</figcaption>
+    </figure>
+    </div>
   </div>
 </section>
-
 <section class="feats">
   <div class="wrap">
     <h2>What Swipr does</h2>
@@ -226,5 +246,6 @@
   </div>
   <div class="wrap"><div class="foot-base"><span>© 2026 Flexkit</span><span>Swipr, Scribr, SubTrakr and Loadr are products of Flexkit.</span></div></div>
 </footer>
+<script src="/main.js?v=d29fdc5a27" defer></script>
 </body>
 </html>
