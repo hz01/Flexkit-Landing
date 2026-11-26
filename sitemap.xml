@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://flexkit.net/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://flexkit.net/swipr/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://flexkit.net/scribr/</loc><lastmod>2026-11-16</lastmod></url>
-  <url><loc>https://flexkit.net/subtrakr/</loc><lastmod>2026-11-16</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://flexkit.net/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image><image:loc>https://flexkit.net/og-image.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/swipr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/scribr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/subtrakr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/loadr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/loadr-light.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://flexkit.net/swipr/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image><image:loc>https://flexkit.net/img/swipr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/og-swipr.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://flexkit.net/scribr/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image><image:loc>https://flexkit.net/img/scribr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/og-scribr.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://flexkit.net/subtrakr/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image><image:loc>https://flexkit.net/img/subtrakr-512.png</image:loc></image:image>
+    <image:image><image:loc>https://flexkit.net/img/og-subtrakr.png</image:loc></image:image>
+  </url>
 </urlset>

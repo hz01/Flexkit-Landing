@@ -11,4 +11,4 @@ To preview locally: `python3 -m http.server` and open http://localhost:8000.
 
 ## Updating
 
-After changing `style.css`, `main.js` or an image, run `python3 stamp.py` before committing. It adds a version tag to every link so visitors get the new files instead of old cached ones.
+After changing anything, run `python3 stamp.py` before committing. It adds a version tag to every stylesheet, script and image link so visitors get the new files instead of old cached ones, and it rewrites `sitemap.xml` with each page's last-changed date. A new page must be added to `PAGES` in `stamp.py` to appear in the sitemap.

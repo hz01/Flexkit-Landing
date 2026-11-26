@@ -20,3 +20,37 @@ for page in ROOT.rglob("*.html"):
     if new != text:
         page.write_text(new, encoding="utf-8")
         print("stamped", page.relative_to(ROOT))
+
+
+# ── Sitemap ──
+# Lists every indexable page with the date it last changed (today if it has uncommitted
+# changes) and the images Google may show for it.
+import datetime, subprocess
+
+PAGES = {
+    "index.html": ["og-image.png", "img/swipr-512.png", "img/scribr-512.png",
+                   "img/subtrakr-512.png", "img/loadr-512.png", "img/loadr-light.webp"],
+    "swipr/index.html": ["img/swipr-512.png", "img/og-swipr.png"],
+    "scribr/index.html": ["img/scribr-512.png", "img/og-scribr.png"],
+    "subtrakr/index.html": ["img/subtrakr-512.png", "img/og-subtrakr.png"],
+}
+
+def changed(path):
+    git = ["git", "-C", str(ROOT)]
+    dirty = subprocess.run(git + ["status", "--porcelain", "--", path], capture_output=True, text=True).stdout.strip()
+    if dirty:
+        return datetime.date.today().isoformat()
+    last = subprocess.run(git + ["log", "-1", "--format=%cs", "--", path], capture_output=True, text=True).stdout.strip()
+    return last or datetime.date.today().isoformat()
+
+rows = []
+for page, images in PAGES.items():
+    loc = "https://flexkit.net/" + page.removesuffix("index.html")
+    imgs = "".join(f"\n    <image:image><image:loc>https://flexkit.net/{i}</image:loc></image:image>" for i in images)
+    rows.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{changed(page)}</lastmod>{imgs}\n  </url>")
+(ROOT / "sitemap.xml").write_text(
+    '<?xml version="1.0" encoding="UTF-8"?>\n'
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+    '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+    + "\n".join(rows) + "\n</urlset>\n", encoding="utf-8")
+print("wrote sitemap.xml")
